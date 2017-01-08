@@ -4,6 +4,8 @@ import com.lovepei.sandwich.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 /**
  * Created by cumt_ on 2017/1/7.
  */
@@ -13,4 +15,6 @@ public interface UserMapper {
     Integer login(@Param("userName") String userName, @Param("passWord") String passWord);
 
     User findByName(@Param("userName") String userName);
+
+    List<User> findAllUser();
 }

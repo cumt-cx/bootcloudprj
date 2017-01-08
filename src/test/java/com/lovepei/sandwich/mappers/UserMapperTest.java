@@ -1,5 +1,7 @@
 package com.lovepei.sandwich.mappers;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.lovepei.sandwich.domain.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +10,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
+
 
 
 /**
@@ -25,8 +30,16 @@ public class UserMapperTest {
     @Test
     public void findByName(){
         User user = userMapper.findByName("admin");
-        logger.debug("admin = [admin] passWord = ["+user.getPassword()+"]");
-        System.out.println("User = [admin] passWord = ["+user.getPassword()+"]");
+        logger.debug("admin = [admin] passWord = ["+user.getPassWord()+"]");
+        System.out.println("User = [admin] passWord = ["+user.getPassWord()+"]");
+    }
+
+    @Test
+    public void findAllUser(){
+        PageHelper.startPage(1,1);
+        List<User> userList = userMapper.findAllUser();
+        PageInfo<User> pageInfos = new PageInfo<>(userList);
+        logger.debug("pageInfos = ["+pageInfos+"]");
     }
 
 }

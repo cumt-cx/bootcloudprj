@@ -14,7 +14,7 @@ public class User implements Serializable {
 
     private String userName;
 
-    private String password;
+    private String passWord;
 
     private String email;
 
@@ -42,12 +42,12 @@ public class User implements Serializable {
         this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPassWord() {
+        return passWord;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassWord(String password) {
+        this.passWord = password;
     }
 
     public String getEmail() {
@@ -98,7 +98,7 @@ public class User implements Serializable {
         return "User{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + passWord + '\'' +
                 ", email='" + email + '\'' +
                 ", deleted=" + deleted +
                 ", createTime=" + createTime +
