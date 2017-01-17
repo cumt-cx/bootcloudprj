@@ -13,6 +13,6 @@ public class ManyReceive2 {
 
     @RabbitHandler
     public void  process(String message){
-        System.out.println("Receiver 1: " + message);
+        System.out.println("Receiver 2: " + message);
     }
 }

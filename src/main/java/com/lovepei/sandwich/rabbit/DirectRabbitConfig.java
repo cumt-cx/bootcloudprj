@@ -12,7 +12,17 @@ import org.springframework.context.annotation.Configuration;
 public class DirectRabbitConfig {
 
     @Bean
-    public Queue Queue(){
+    public Queue directHelloQueue(){
         return new Queue("directHello");
+    }
+
+    @Bean
+    public Queue fuqQueue(){
+        return new Queue("fuq");
+    }
+
+    @Bean
+    public Queue  fuqObjectQueue(){
+        return new Queue("fuqObject");
     }
 }
