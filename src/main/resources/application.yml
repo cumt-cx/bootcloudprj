@@ -32,6 +32,12 @@ spring:
         view:
             prefix: /templates/
             suffix: .ftl
+    #rabbitmq
+    rabbitmq:
+      host: 127.0.0.1
+      port: 5672
+      username: fuq
+      password: lovepei+1S
 
 
 
@@ -73,3 +79,4 @@ redis:
         min-idle: 0
         # 连接超时时间（毫秒）
         timeout: 0
+
